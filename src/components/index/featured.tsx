@@ -1,6 +1,6 @@
-import img from "../../../assets/Image Placeholder.png";
-import avatar from "../../../assets/Avatar.png";
-import MainButton from "../main.button";
+import img from "../../assets/Image Placeholder.png";
+import avatar from "../../assets/Avatar.png";
+import MainButton from "../shared/main.button";
 
 const FeaturedPoster = () => {
   return (

@@ -1,4 +1,4 @@
-import Featured from "../components/shared/index/featured";
+import Featured from "../components/index/featured";
 
 const IndexPage = () => {
   return (
