@@ -1,20 +1,47 @@
-import { animated } from "@react-spring/web";
-import { Link } from "react-router-dom";
+import { animated, useSpring } from "@react-spring/web";
+import { Link, useLocation } from "react-router-dom";
 import { NavLinks } from "../nav.links";
 import MainButton from "../main.button";
 import MenuIcon from "../../../assets/menu.icon.png";
-import { useState } from "react";
-import BurgerMenu from "./burger.menu";
+import { Suspense, lazy, useEffect, useState } from "react";
+const BurgerMenu = lazy(() => import("./burger.menu"));
 import Logo from "./logo";
+import Loading from "../loading";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const [animatedHeader, api] = useSpring(() => ({
+    from: { y: -150 },
+    config: {
+      duration: 400,
+      mass: 5,
+      friction: 120,
+      tension: 120,
+    },
+  }));
+
+  const handelAnimation = () => {
+    api.start({
+      from: { y: -150 },
+      to: { y: 0 },
+    });
+  };
+
+  useEffect(() => {
+    handelAnimation();
+  }, [location.pathname]);
 
   return (
     <animated.header
+      style={{ ...animatedHeader }}
       className={`w-full h-[100px] flex items-center justify-center`}
     >
-      {open && <BurgerMenu />}
+      {open && (
+        <Suspense fallback={<Loading />}>
+          <BurgerMenu />
+        </Suspense>
+      )}
       <div
         role="center-elements"
         className="w-11/12 sm:w-10/12 lg:w-8/12 flex justify-between items-center "
