@@ -17,7 +17,7 @@ const Header = () => {
       {open && <BurgerMenu />}
       <div
         role="center-elements"
-        className="w-11/12 sm:w-10/12 flex justify-between items-center "
+        className="w-11/12 sm:w-10/12 lg:w-8/12 flex justify-between items-center "
       >
         <Logo />
         <nav className="hidden lg:flex justify-center items-center gap-[6px] font-WorkSans">

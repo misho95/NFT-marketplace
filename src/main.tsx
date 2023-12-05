@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/shared/header/header";
 import Footer from "./components/shared/footer/footer";
+import IndexPage from "./pages/index.page";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Header />
+        <IndexPage />
         <Footer />
       </>
     ),
