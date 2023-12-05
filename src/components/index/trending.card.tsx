@@ -19,7 +19,7 @@ interface ComponentPropsType {
   props: PropsType;
 }
 
-const FeaturedCard = ({ props, responsProps }: ComponentPropsType) => {
+const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
   const { row, divSize, gap } = responsProps;
   const { img, icons } = props;
   const { width, height } = useGetCardSize({
@@ -70,4 +70,4 @@ const FeaturedCard = ({ props, responsProps }: ComponentPropsType) => {
   );
 };
 
-export default FeaturedCard;
+export default TrendingCard;

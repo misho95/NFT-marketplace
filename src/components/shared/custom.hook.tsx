@@ -7,7 +7,6 @@ interface GetCardSizePropsType {
   divSize: number;
   gap: number;
 }
-
 export const useGetCardSize = ({
   width,
   height,
@@ -15,16 +14,23 @@ export const useGetCardSize = ({
   divSize,
   gap,
 }: GetCardSizePropsType) => {
-  const [cardWidth, setCardWidth] = useState<number>(width);
-  const [cardHeight, setCardHeight] = useState<number>(height);
+  const [cardWidth, setCardWidth] = useState<number>(0);
+  const [cardHeight, setCardHeight] = useState<number>(0);
 
   useEffect(() => {
-    const aspectRatio = cardWidth / cardHeight;
-    const customWidth = divSize / row - (row - 1) * gap;
-    const customHeight = customWidth / aspectRatio;
+    const aspectRatio = width / height;
+    const totalGapWidth = gap * (row - 1);
+    const availableWidth = divSize - totalGapWidth;
+    const baseWidth = Math.floor(availableWidth / row);
+    const remainder = availableWidth % row;
+
+    // Distribute the remainder equally among cards
+    const customWidth = baseWidth + Math.floor(remainder / row);
+    const customHeight = Math.floor(customWidth / aspectRatio);
+
     setCardWidth(customWidth);
     setCardHeight(customHeight);
-  }, [cardWidth, cardHeight, divSize, row]);
+  }, [width, height, divSize, row, gap]);
 
   return { width: cardWidth, height: cardHeight };
 };

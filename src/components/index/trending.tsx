@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import FeaturedCard from "./featured.card";
+import TrendingCard from "./trending.card";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 const Trending = () => {
@@ -26,6 +26,33 @@ const Trending = () => {
     }
   }, [windowSize]);
 
+  const featuredData = [
+    {
+      id: 1,
+      img: "src/assets/dog.png",
+      icons: {
+        icon: "src/assets/dog1.png",
+        icon2: "src/assets/dog2.png",
+      },
+    },
+    {
+      id: 2,
+      img: "src/assets/mushrooms.png",
+      icons: {
+        icon: "src/assets/mushrooms2.png",
+        icon2: "src/assets/mushrooms3.png",
+      },
+    },
+    {
+      id: 3,
+      img: "src/assets/robot.png",
+      icons: {
+        icon: "src/assets/robot1.png",
+        icon2: "src/assets/robot2.png",
+      },
+    },
+  ];
+
   return (
     <section className="flex flex-col justify-between gap-[60px] py-[30px] text-white font-WorkSans">
       <div role="title" className="flex flex-col gap-[10px]">
@@ -38,42 +65,23 @@ const Trending = () => {
         className="flex justify-between w-full"
         style={{ gap: gap }}
       >
-        {row > 0 && (
-          <FeaturedCard
-            props={{
-              img: "src/assets/dog.png",
-              icons: {
-                icon: "src/assets/dog1.png",
-                icon2: "src/assets/dog2.png",
-              },
-            }}
-            responsProps={{ divSize, row, gap }}
-          />
-        )}
-        {row > 1 && (
-          <FeaturedCard
-            props={{
-              img: "src/assets/mushrooms.png",
-              icons: {
-                icon: "src/assets/mushrooms2.png",
-                icon2: "src/assets/mushrooms3.png",
-              },
-            }}
-            responsProps={{ divSize, row, gap }}
-          />
-        )}
-        {row > 2 && (
-          <FeaturedCard
-            props={{
-              img: "src/assets/robot.png",
-              icons: {
-                icon: "src/assets/robot1.png",
-                icon2: "src/assets/robot2.png",
-              },
-            }}
-            responsProps={{ divSize, row, gap }}
-          />
-        )}
+        {featuredData.map((d, index) => {
+          return (
+            row > index && (
+              <TrendingCard
+                key={d.id}
+                props={{
+                  img: d.img,
+                  icons: {
+                    icon: d.icons.icon,
+                    icon2: d.icons.icon2,
+                  },
+                }}
+                responsProps={{ divSize, row, gap }}
+              />
+            )
+          );
+        })}
       </div>
     </section>
   );
