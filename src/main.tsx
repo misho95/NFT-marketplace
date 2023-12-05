@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/header/header";
+import Header from "./components/shared/header/header";
+import Footer from "./components/shared/footer/footer";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Header />
+        <Footer />
       </>
     ),
   },
