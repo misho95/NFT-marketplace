@@ -1,9 +1,27 @@
-import img from "../../assets/Primary Photo Placeholder.png";
-import img1 from "../../assets/img1.png";
-import img2 from "../../assets/img2.png";
 import { useGetCardSize } from "../shared/custom.hook";
 
-const FeaturedCard = ({ row, divSize, gap }) => {
+interface ResponsPropsType {
+  row: number;
+  divSize: number;
+  gap: number;
+}
+
+interface PropsType {
+  img: string;
+  icons: {
+    icon: string;
+    icon2: string;
+  };
+}
+
+interface ComponentPropsType {
+  responsProps: ResponsPropsType;
+  props: PropsType;
+}
+
+const FeaturedCard = ({ props, responsProps }: ComponentPropsType) => {
+  const { row, divSize, gap } = responsProps;
+  const { img, icons } = props;
   const { width, height } = useGetCardSize({
     width: 330,
     height: 525,
@@ -28,24 +46,24 @@ const FeaturedCard = ({ row, divSize, gap }) => {
       <img
         src={img}
         style={{ width: width, height: height }}
-        className="hover:scale-90 duration-200"
+        className="hover:scale-90 duration-200 cursor-pointer"
       />
       <div className="flex justify-between gap-[5px]">
         <img
-          src={img1}
+          src={icons.icon}
           style={{ width: avatar.width, height: avatar.height }}
-          className="hover:scale-90 duration-200"
+          className="hover:scale-90 duration-200 cursor-pointer"
         />
         <img
-          src={img2}
+          src={icons.icon2}
           style={{ width: avatar.width, height: avatar.height }}
-          className="hover:scale-90 duration-200"
+          className="hover:scale-90 duration-200 cursor-pointer"
         />
         <span
-          className=" bg-[#A259FF] text-[22px] rounded-xl flex justify-center items-center hover:scale-90 duration-200"
+          className=" bg-[#A259FF] text-[22px] rounded-xl flex justify-center items-center hover:scale-90 duration-200 select-none cursor-pointer"
           style={{ width: avatar.width, height: avatar.height }}
         >
-          1024+
+          1025+
         </span>
       </div>
     </article>

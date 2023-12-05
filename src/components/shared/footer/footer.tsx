@@ -32,22 +32,22 @@ const Footer = () => {
             <Logo />
             <p>NFT marketplace UI created with Anima for Figma.</p>
             <p>Join our community</p>
-            <span className="flex gap-[5px]">
+            <span className="flex gap-[5px] ">
               <img
                 src={Discord}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200"
+                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
               />
               <img
                 src={YouTube}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200"
+                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
               />
               <img
                 src={Twitter}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200"
+                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
               />
               <img
                 src={Instagram}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200"
+                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
               />
             </span>
           </span>

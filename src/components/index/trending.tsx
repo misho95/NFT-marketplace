@@ -6,7 +6,7 @@ const Trending = () => {
   const containerRef = useRef<HTMLInputElement>(null);
   const windowSize = useWindowSize();
   const [divSize, setDivSize] = useState<number>(0);
-  const [rows, setRows] = useState<number>(0);
+  const [row, setRow] = useState<number>(0);
   const [gap, setGap] = useState(0);
 
   useEffect(() => {
@@ -16,13 +16,13 @@ const Trending = () => {
     }
 
     if (windowSize.width && windowSize.width > 1364) {
-      setRows(3);
+      setRow(3);
       setGap(20);
     } else if (windowSize.width && windowSize.width > 726) {
-      setRows(2);
+      setRow(2);
       setGap(30);
     } else {
-      setRows(1);
+      setRow(1);
     }
   }, [windowSize]);
 
@@ -35,12 +35,45 @@ const Trending = () => {
       <div
         ref={containerRef}
         role="cards-holder"
-        className="flex justify-between w-full "
+        className="flex justify-between w-full"
         style={{ gap: gap }}
       >
-        {rows > 0 && <FeaturedCard divSize={divSize} row={rows} gap={gap} />}
-        {rows > 1 && <FeaturedCard divSize={divSize} row={rows} gap={gap} />}
-        {rows > 2 && <FeaturedCard divSize={divSize} row={rows} gap={gap} />}
+        {row > 0 && (
+          <FeaturedCard
+            props={{
+              img: "src/assets/dog.png",
+              icons: {
+                icon: "src/assets/dog1.png",
+                icon2: "src/assets/dog2.png",
+              },
+            }}
+            responsProps={{ divSize, row, gap }}
+          />
+        )}
+        {row > 1 && (
+          <FeaturedCard
+            props={{
+              img: "src/assets/mushrooms.png",
+              icons: {
+                icon: "src/assets/mushrooms2.png",
+                icon2: "src/assets/mushrooms3.png",
+              },
+            }}
+            responsProps={{ divSize, row, gap }}
+          />
+        )}
+        {row > 2 && (
+          <FeaturedCard
+            props={{
+              img: "src/assets/robot.png",
+              icons: {
+                icon: "src/assets/robot1.png",
+                icon2: "src/assets/robot2.png",
+              },
+            }}
+            responsProps={{ divSize, row, gap }}
+          />
+        )}
       </div>
     </section>
   );
