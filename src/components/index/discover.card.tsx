@@ -35,7 +35,7 @@ const DiscoverCard = ({ data, responsProps }: PropsType) => {
 
   return (
     <article
-      className=" text-white font-WorkSans cursor-pointer flex flex-col hover:scale-90 duration-200"
+      className=" text-white font-WorkSans cursor-pointer flex flex-col sm:hover:scale-90 duration-200"
       style={{ width: width, height: height }}
     >
       <img src={data.img} />

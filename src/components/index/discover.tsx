@@ -47,22 +47,22 @@ const Discover = () => {
     },
     {
       id: 2,
-      title: "Distant Galaxy",
-      img: "/assets/dicover1.png",
+      title: "Life On Edena",
+      img: "/assets/dicover2.png",
       author: {
-        icon: "/assets/Avatar5.png",
-        name: "MoonDancer",
+        icon: "/assets/Avatar6.png",
+        name: "NebulaKid",
       },
       price: 1.63,
       highestbid: 0.33,
     },
     {
       id: 3,
-      title: "Distant Galaxy",
-      img: "/assets/dicover1.png",
+      title: "AstroFiction",
+      img: "/assets/dicover3.png",
       author: {
-        icon: "/assets/Avatar5.png",
-        name: "MoonDancer",
+        icon: "/assets/Avatar7.png",
+        name: "Spaceone",
       },
       price: 1.63,
       highestbid: 0.33,
@@ -83,7 +83,7 @@ const Discover = () => {
             </p>
           </span>
           <MainButton
-            title={"View Rankings"}
+            title={"See All"}
             icon={"/assets/EyeIcon.png"}
             wide={true}
             CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
@@ -108,7 +108,7 @@ const Discover = () => {
           })}
         </div>
         <MainButton
-          title={"View Rankings"}
+          title={"See All"}
           icon={"/assets/EyeIcon.png"}
           wide={true}
           CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}

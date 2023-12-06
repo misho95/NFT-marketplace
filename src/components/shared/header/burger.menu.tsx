@@ -18,11 +18,7 @@ const BurgerMenu = () => {
       <nav className="flex flex-col justify-center items-center gap-[3px] bg-neutral-200">
         {NavLinks.map((l, index) => {
           return (
-            <Link
-              key={index}
-              to={l.link}
-              className="text-black p-[20px] hover:scale-95 duration-150"
-            >
+            <Link key={index} to={l.link} className="text-black p-[20px]">
               {l.name}
             </Link>
           );

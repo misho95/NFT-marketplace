@@ -53,7 +53,7 @@ const Header = () => {
               <Link
                 key={index}
                 to={l.link}
-                className="text-white p-[20px] hover:scale-95 duration-150"
+                className="text-white p-[20px] sm:hover:scale-95 duration-150"
               >
                 {l.name}
               </Link>
@@ -69,7 +69,7 @@ const Header = () => {
         <button
           aria-label="Open The Menu"
           aria-hidden
-          className="lg:hidden hover:scale-90 duration-200"
+          className="lg:hidden"
           onClick={() => setOpen(!open)}
         >
           <img src={MenuIcon} alt="open/close" loading="lazy" />

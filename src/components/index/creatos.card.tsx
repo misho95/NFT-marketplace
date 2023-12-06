@@ -34,7 +34,7 @@ const CreatorsCard = ({
 
   return (
     <article
-      className="bg-[#3B3B3B] text-white font-WorkSans rounded-3xl relative hover:scale-90 duration-200 flex flex-col justify-center items-center gap-[20px] cursor-pointer"
+      className="bg-[#3B3B3B] text-white font-WorkSans rounded-3xl relative sm:hover:scale-90 duration-200 flex flex-col justify-center items-center gap-[20px] cursor-pointer"
       style={{ width: width, height: height }}
     >
       <span className="absolute top-[20px] left-[20px] w-[30px] h-[30px] bg-[#2B2B2B] rounded-full text-[#858584] flex justify-center items-center select-none">

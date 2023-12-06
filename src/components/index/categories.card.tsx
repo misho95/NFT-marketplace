@@ -26,7 +26,7 @@ const CategoriesCard = ({ title, img, responsProps }: PropsType) => {
 
   return (
     <article
-      className="rounded-2xl overflow-hidden hover:scale-90 duration-200 cursor-pointer"
+      className="rounded-2xl overflow-hidden sm:hover:scale-90 duration-200 cursor-pointer"
       style={{ width: width, height: height && height }}
     >
       <img src={img} className="w-full" loading="lazy" />

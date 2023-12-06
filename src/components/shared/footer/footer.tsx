@@ -62,22 +62,22 @@ const Footer = () => {
             <span className="flex gap-[5px] ">
               <img
                 src={Discord}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
+                className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer"
                 loading="lazy"
               />
               <img
                 src={YouTube}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
+                className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer"
                 loading="lazy"
               />
               <img
                 src={Twitter}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
+                className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer"
                 loading="lazy"
               />
               <img
                 src={Instagram}
-                className="opacity-50 hover:opacity-100 hover:scale-90 duration-200 cursor-pointer"
+                className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer"
                 loading="lazy"
               />
             </span>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   to={l.link}
-                  className="text-[#CCCCCC] p-[10px] hover:scale-95 duration-150"
+                  className="text-[#CCCCCC] p-[10px] sm:hover:scale-95 duration-150"
                 >
                   {l.name}
                 </Link>

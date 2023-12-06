@@ -55,24 +55,24 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
       <img
         src={img}
         style={{ width: width, height: height }}
-        className="hover:scale-90 duration-200 cursor-pointer"
+        className="sm:hover:scale-90 duration-200 cursor-pointer"
         loading="lazy"
       />
       <div className="flex justify-between gap-[5px]">
         <img
           src={icons.icon}
           style={{ width: avatar.width, height: avatar.height }}
-          className="hover:scale-90 duration-200 cursor-pointer"
+          className="sm:hover:scale-90 duration-200 cursor-pointer"
           loading="lazy"
         />
         <img
           src={icons.icon2}
           style={{ width: avatar.width, height: avatar.height }}
-          className="hover:scale-90 duration-200 cursor-pointer"
+          className="sm:hover:scale-90 duration-200 cursor-pointer"
           loading="lazy"
         />
         <span
-          className=" bg-[#A259FF] text-[22px] rounded-xl flex justify-center items-center hover:scale-90 duration-200 select-none cursor-pointer"
+          className=" bg-[#A259FF] text-[22px] rounded-xl flex justify-center items-center sm:hover:scale-90 duration-200 select-none cursor-pointer"
           style={{ width: avatar.width, height: avatar.height }}
         >
           1025+
