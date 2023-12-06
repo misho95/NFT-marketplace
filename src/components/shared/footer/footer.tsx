@@ -9,6 +9,7 @@ import Logo from "../header/logo";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import { animated, useSpring } from "@react-spring/web";
+import EmailInput from "../email.input";
 
 const Footer = () => {
   const windowSize = useWindowSize();
@@ -101,21 +102,7 @@ const Footer = () => {
             <p className="text-[#CCCCCC]">
               Get exclusive promotions & updates straight to your inbox.
             </p>
-            <label className="flex flex-col gap-[20px] sm:relative sm:w-[420px] sm:h-[60px] sm:block">
-              <input
-                type="text"
-                placeholder="Enter your email here"
-                className=" sm:absolute left-0 bg-white rounded-3xl w-full h-[60px] p-[15px] focus:outline-none text-black"
-              />
-              <span className=" sm:absolute sm:-right-[1px] sm:top-1/2 sm:-translate-y-1/2">
-                <MainButton
-                  title={"Subscribe"}
-                  icon={mobile ? "/assets/EnvelopeSimple.png" : null}
-                  wide={true}
-                  CTS={"w-full"}
-                />
-              </span>
-            </label>
+            <EmailInput width={400} response="sm" checkForMobile={true} />
           </span>
         </div>
         <div className="flex flex-col gap-[20px]">

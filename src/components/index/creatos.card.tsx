@@ -44,6 +44,7 @@ const CreatorsCard = ({
         src={img}
         className="w-[120px] h-[120px] rounded-full"
         loading="lazy"
+        alt={title}
       />
       <div className="flex flex-col gap-[3px] justify-center items-center">
         <h5 className="text-[22px]">{title}</h5>

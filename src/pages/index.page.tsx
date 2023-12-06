@@ -5,6 +5,8 @@ import Creators from "../components/index/creators";
 import Categories from "../components/index/categories";
 import Discover from "../components/index/discover";
 import NftHighLight from "../components/index/nft.highlight";
+import HowItWorks from "../components/index/how.it.works";
+import JoinUs from "../components/index/join.us";
 
 const IndexPage = () => {
   const animatedPage = useSpring({
@@ -29,6 +31,8 @@ const IndexPage = () => {
       <Categories />
       <Discover />
       <NftHighLight />
+      <HowItWorks />
+      <JoinUs />
     </animated.main>
   );
 };
