@@ -90,7 +90,7 @@ const Discover = () => {
       <div
         ref={containerRef}
         role="cards-container"
-        className="w-full flex flex-wrap"
+        className="w-full flex flex-wrap sm:flex-nowrap"
         style={{ gap: gap }}
       >
         {discoverData.map((d, index) => {
