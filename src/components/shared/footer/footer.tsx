@@ -106,7 +106,7 @@ const Footer = () => {
               <span className=" sm:absolute sm:-right-[1px] sm:top-1/2 sm:-translate-y-1/2">
                 <MainButton
                   title={"Subscribe"}
-                  icon={mobile ? "src/assets/EnvelopeSimple.png" : null}
+                  icon={mobile ? "/assets/EnvelopeSimple.png" : null}
                   wide={true}
                   CTS={"w-full"}
                 />

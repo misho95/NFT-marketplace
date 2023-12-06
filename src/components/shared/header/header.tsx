@@ -61,7 +61,7 @@ const Header = () => {
           })}
           <MainButton
             title={"Sign Up"}
-            icon={"src/assets/user.icon.png"}
+            icon={"/assets/user.icon.png"}
             wide={false}
             CTS={""}
           />
