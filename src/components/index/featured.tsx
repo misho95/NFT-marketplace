@@ -5,7 +5,7 @@ import ContainerCenter from "../shared/container.center";
 
 const FeaturedPoster = () => {
   return (
-    <div className="bg-[#3B3B3B] rounded-3xl w-full h-full">
+    <div className="bg-[#3B3B3B] rounded-3xl w-full h-full hover:scale-90 duration-200">
       <img src={img} />
       <span className="p-[25px] flex flex-col gap-[10px]">
         <h5 className="text-white text-[25px]">Space Walking</h5>
