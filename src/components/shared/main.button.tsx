@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 interface PropsType {
   title: string;
-  icon: string;
+  icon: string | null;
   wide: boolean;
   CTS: string;
 }
