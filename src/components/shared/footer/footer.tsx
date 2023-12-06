@@ -3,11 +3,12 @@ import YouTube from "../../../assets/YoutubeLogo.png";
 import Twitter from "../../../assets/TwitterLogo.png";
 import Instagram from "../../../assets/InstagramLogo.png";
 import { NavLinks } from "../nav.links";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MainButton from "../main.button";
 import Logo from "../header/logo";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
+import { animated, useSpring } from "@react-spring/web";
 
 const Footer = () => {
   const windowSize = useWindowSize();
@@ -21,8 +22,34 @@ const Footer = () => {
     }
   }, [windowSize]);
 
+  const location = useLocation();
+  const [animatedHeader, api] = useSpring(() => ({
+    from: { opacity: 0 },
+    config: {
+      duration: 800,
+      mass: 5,
+      friction: 120,
+      tension: 120,
+    },
+  }));
+
+  const handelAnimation = () => {
+    api.start({
+      delay: 500,
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+    });
+  };
+
+  useEffect(() => {
+    handelAnimation();
+  }, [location]);
+
   return (
-    <footer className="w-full bg-[#3B3B3B] flex justify-center items-center">
+    <animated.footer
+      style={{ ...animatedHeader }}
+      className="w-full bg-[#3B3B3B] flex justify-center items-center"
+    >
       <div
         role="center-footer-content"
         className="w-11/12 sm:w-10/12 lg:w-8/12 py-[45px] flex flex-col gap-[30px]"
@@ -94,7 +121,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </animated.footer>
   );
 };
 

@@ -1,14 +1,14 @@
 export const NavLinks = [
   {
     name: "Marketplace",
-    link: "marketplace",
+    link: "/marketplace",
   },
   {
     name: "Rankings",
-    link: "rankings",
+    link: "/rankings",
   },
   {
     name: "Connect a wallet",
-    link: "connectawallet",
+    link: "/connectawallet",
   },
 ];
