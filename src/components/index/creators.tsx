@@ -10,74 +10,74 @@ const Creators = () => {
       id: 1,
       title: "Keepitreal",
       totalSales: 34.53,
-      img: "src/assets/ava1.png",
+      img: "/assets/ava1.png",
     },
     {
       id: 2,
       title: "DigiLab",
       totalSales: 34.53,
-      img: "src/assets/ava2.png",
+      img: "/assets/ava2.png",
     },
     {
       id: 3,
       title: "GravityOne",
       totalSales: 34.53,
-      img: "src/assets/ava3.png",
+      img: "/assets/ava3.png",
     },
     {
       id: 4,
       title: "Juanie",
       totalSales: 34.53,
-      img: "src/assets/ava4.png",
+      img: "/assets/ava4.png",
     },
     {
       id: 5,
       title: "BlueWhale",
       totalSales: 34.53,
-      img: "src/assets/ava5.png",
+      img: "/assets/ava5.png",
     },
     {
       id: 6,
       title: "Mr Fox",
       totalSales: 34.53,
-      img: "src/assets/ava6.png",
+      img: "/assets/ava6.png",
     },
     {
       id: 7,
       title: "Shroomie",
       totalSales: 34.53,
-      img: "src/assets/ava7.png",
+      img: "/assets/ava7.png",
     },
 
     {
       id: 8,
       title: "robotica",
       totalSales: 34.53,
-      img: "src/assets/ava8.png",
+      img: "/assets/ava8.png",
     },
     {
       id: 9,
       title: "RustyRobot",
       totalSales: 34.53,
-      img: "src/assets/ava9.png",
+      img: "/assets/ava9.png",
     },
     {
       id: 10,
       title: "animakid",
       totalSales: 34.53,
-      img: "src/assets/ava10.png",
+      img: "/assets/ava10.png",
     },
     {
       id: 11,
       title: "Dotgu",
       totalSales: 34.53,
-      img: "src/assets/ava11.png",
+      img: "/assets/ava11.png",
     },
     {
       id: 12,
       title: "Ghiblier",
       totalSales: 34.53,
-      img: "src/assets/ava12.png",
+      img: "/assets/ava12.png",
     },
   ];
 
@@ -124,7 +124,7 @@ const Creators = () => {
           </span>
           <MainButton
             title={"View Rankings"}
-            icon={"src/assets/RocketLaunchIcon.png"}
+            icon={"/assets/RocketLaunchIcon.png"}
             wide={true}
             CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
           />
@@ -152,7 +152,7 @@ const Creators = () => {
         </div>
         <MainButton
           title={"View Rankings"}
-          icon={"src/assets/RocketLaunchIcon.png"}
+          icon={"/assets/RocketLaunchIcon.png"}
           wide={true}
           CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
         />

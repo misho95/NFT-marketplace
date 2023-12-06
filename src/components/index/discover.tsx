@@ -37,9 +37,9 @@ const Discover = () => {
     {
       id: 1,
       title: "Distant Galaxy",
-      img: "src/assets/dicover1.png",
+      img: "/assets/dicover1.png",
       author: {
-        icon: "src/assets/Avatar5.png",
+        icon: "/assets/Avatar5.png",
         name: "MoonDancer",
       },
       price: 1.63,
@@ -48,9 +48,9 @@ const Discover = () => {
     {
       id: 2,
       title: "Distant Galaxy",
-      img: "src/assets/dicover1.png",
+      img: "/assets/dicover1.png",
       author: {
-        icon: "src/assets/Avatar5.png",
+        icon: "/assets/Avatar5.png",
         name: "MoonDancer",
       },
       price: 1.63,
@@ -59,9 +59,9 @@ const Discover = () => {
     {
       id: 3,
       title: "Distant Galaxy",
-      img: "src/assets/dicover1.png",
+      img: "/assets/dicover1.png",
       author: {
-        icon: "src/assets/Avatar5.png",
+        icon: "/assets/Avatar5.png",
         name: "MoonDancer",
       },
       price: 1.63,
@@ -84,7 +84,7 @@ const Discover = () => {
           </span>
           <MainButton
             title={"View Rankings"}
-            icon={"src/assets/EyeIcon.png"}
+            icon={"/assets/EyeIcon.png"}
             wide={true}
             CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
           />
@@ -109,7 +109,7 @@ const Discover = () => {
         </div>
         <MainButton
           title={"View Rankings"}
-          icon={"src/assets/EyeIcon.png"}
+          icon={"/assets/EyeIcon.png"}
           wide={true}
           CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
         />

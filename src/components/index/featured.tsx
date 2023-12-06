@@ -35,7 +35,7 @@ const Featured = () => {
           </div>
           <MainButton
             title={"Get Started"}
-            icon={"src/assets/RocketLaunch.png"}
+            icon={"/assets/RocketLaunch.png"}
             wide={true}
             CTS={"w-full sm:w-fit sm:h-fit"}
           />
