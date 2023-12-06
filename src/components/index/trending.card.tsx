@@ -8,6 +8,11 @@ interface ResponsPropsType {
 
 interface PropsType {
   img: string;
+  title: string;
+  author: {
+    name: string;
+    icon: string;
+  };
   icons: {
     icon: string;
     icon2: string;
@@ -21,7 +26,7 @@ interface ComponentPropsType {
 
 const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
   const { row, divSize, gap } = responsProps;
-  const { img, icons } = props;
+  const { img, icons, title, author } = props;
   const { width, height } = useGetCardSize({
     width: 330,
     height: 525,
@@ -68,6 +73,13 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
           style={{ width: avatar.width, height: avatar.height }}
         >
           1025+
+        </span>
+      </div>
+      <div role="author" className="flex flex-col gap-[6px]">
+        <h5 className="text-[22px]">{props.title}</h5>
+        <span className="flex gap-[6px]">
+          <img src={props.author.icon} />
+          <p>{props.author.name}</p>
         </span>
       </div>
     </article>

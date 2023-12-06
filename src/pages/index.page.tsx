@@ -3,6 +3,7 @@ import Featured from "../components/index/featured";
 import Trending from "../components/index/trending";
 import Creators from "../components/index/creators";
 import Categories from "../components/index/categories";
+import Discover from "../components/index/discover";
 
 const IndexPage = () => {
   const animatedPage = useSpring({
@@ -26,6 +27,7 @@ const IndexPage = () => {
         <Trending />
         <Creators />
         <Categories />
+        <Discover />
       </div>
     </animated.main>
   );

@@ -30,6 +30,11 @@ const Trending = () => {
     {
       id: 1,
       img: "src/assets/dog.png",
+      title: "DSGN Animals",
+      author: {
+        name: "MrFox",
+        icon: "src/assets/Avatar2.png",
+      },
       icons: {
         icon: "src/assets/dog1.png",
         icon2: "src/assets/dog2.png",
@@ -38,6 +43,11 @@ const Trending = () => {
     {
       id: 2,
       img: "src/assets/mushrooms.png",
+      title: "Magic Mushrooms",
+      author: {
+        name: "Shroomie",
+        icon: "src/assets/Avatar3.png",
+      },
       icons: {
         icon: "src/assets/mushrooms2.png",
         icon2: "src/assets/mushrooms3.png",
@@ -46,6 +56,11 @@ const Trending = () => {
     {
       id: 3,
       img: "src/assets/robot.png",
+      title: "Disco Machines",
+      author: {
+        name: "BeKind2Robots",
+        icon: "src/assets/Avatar4.png",
+      },
       icons: {
         icon: "src/assets/robot1.png",
         icon2: "src/assets/robot2.png",
@@ -72,6 +87,11 @@ const Trending = () => {
                 key={d.id}
                 props={{
                   img: d.img,
+                  title: d.title,
+                  author: {
+                    name: d.author.name,
+                    icon: d.author.icon,
+                  },
                   icons: {
                     icon: d.icons.icon,
                     icon2: d.icons.icon2,
