@@ -17,10 +17,10 @@ const Trending = () => {
 
     if (windowSize.width && windowSize.width > 1364) {
       setRow(3);
-      setGap(20);
+      setGap(30);
     } else if (windowSize.width && windowSize.width > 726) {
       setRow(2);
-      setGap(30);
+      setGap(20);
     } else {
       setRow(1);
     }

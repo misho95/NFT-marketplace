@@ -2,6 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import Featured from "../components/index/featured";
 import Trending from "../components/index/trending";
 import Creators from "../components/index/creators";
+import Categories from "../components/index/categories";
 
 const IndexPage = () => {
   const animatedPage = useSpring({
@@ -24,6 +25,7 @@ const IndexPage = () => {
         <Featured />
         <Trending />
         <Creators />
+        <Categories />
       </div>
     </animated.main>
   );

@@ -103,6 +103,7 @@ const Creators = () => {
       setGap(20);
     } else {
       setTotal(6);
+      setGap(20);
       setRow(1);
     }
   }, [windowSize]);
