@@ -72,6 +72,9 @@ const Categories = () => {
 
   return (
     <section className="flex flex-col gap-[30px] py-[30px] text-white font-WorkSans">
+      <h3 className="text-[38px] text-white font-WorkSans">
+        Browse Categories
+      </h3>
       <div ref={containerRef} className="flex flex-wrap " style={{ gap: gap }}>
         {categoriesData.map((d) => {
           return (

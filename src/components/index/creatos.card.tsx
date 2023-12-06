@@ -28,6 +28,10 @@ const CreatorsCard = ({
     gap: gap,
   });
 
+  if (!width || !height) {
+    return;
+  }
+
   return (
     <article
       className="bg-[#3B3B3B] text-white font-WorkSans rounded-3xl relative hover:scale-90 duration-200 flex flex-col justify-center items-center gap-[20px] cursor-pointer"

@@ -38,6 +38,10 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
     gap: 5,
   });
 
+  if (!width || !height) {
+    return;
+  }
+
   return (
     <article
       className="flex flex-col gap-[10px]"

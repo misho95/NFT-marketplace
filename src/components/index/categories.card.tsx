@@ -20,13 +20,17 @@ const CategoriesCard = ({ title, img, responsProps }: PropsType) => {
     gap: gap,
   });
 
+  if (!width || !height) {
+    return;
+  }
+
   return (
     <article
-      className="rounded-2xl overflow-hidden hover:scale-90 duration-200"
-      style={{ width: width, height: height }}
+      className="rounded-2xl overflow-hidden hover:scale-90 duration-200 cursor-pointer"
+      style={{ width: width, height: height && height }}
     >
       <img src={img} className="w-full" />
-      <h5 className="bg-[#3B3B3B] w-full h-[76px] rounded-b-2xl text-[22px] flex justify-center items-center">
+      <h5 className="bg-[#3B3B3B] w-full rounded-b-2xl text-[16px] py-[10px] lg:text-[22px] flex justify-center items-center">
         {title}
       </h5>
     </article>
