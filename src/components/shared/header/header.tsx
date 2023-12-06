@@ -72,7 +72,7 @@ const Header = () => {
           className="lg:hidden hover:scale-90 duration-200"
           onClick={() => setOpen(!open)}
         >
-          <img src={MenuIcon} alt="open/close" />
+          <img src={MenuIcon} alt="open/close" loading="lazy" />
         </button>
       </div>
     </animated.header>

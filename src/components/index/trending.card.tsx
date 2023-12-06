@@ -56,17 +56,20 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
         src={img}
         style={{ width: width, height: height }}
         className="hover:scale-90 duration-200 cursor-pointer"
+        loading="lazy"
       />
       <div className="flex justify-between gap-[5px]">
         <img
           src={icons.icon}
           style={{ width: avatar.width, height: avatar.height }}
           className="hover:scale-90 duration-200 cursor-pointer"
+          loading="lazy"
         />
         <img
           src={icons.icon2}
           style={{ width: avatar.width, height: avatar.height }}
           className="hover:scale-90 duration-200 cursor-pointer"
+          loading="lazy"
         />
         <span
           className=" bg-[#A259FF] text-[22px] rounded-xl flex justify-center items-center hover:scale-90 duration-200 select-none cursor-pointer"
@@ -78,7 +81,7 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
       <div role="author" className="flex flex-col gap-[6px]">
         <h5 className="text-[22px]">{title}</h5>
         <span className="flex gap-[6px] cursor-pointer">
-          <img src={author.icon} />
+          <img src={author.icon} loading="lazy" />
           <p>{author.name}</p>
         </span>
       </div>

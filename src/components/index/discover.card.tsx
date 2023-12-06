@@ -42,7 +42,8 @@ const DiscoverCard = ({ data, responsProps }: PropsType) => {
       <div className="flex flex-col gap-[15px] justify-between px-[20px] py-[10px] bg-[#3B3B3B] rounded-b-2xl">
         <h5 className="text-[22px]">Distant Galaxy</h5>
         <span className="flex gap-[6px]">
-          <img src={data.author.icon} /> <p>{data.author.name}</p>
+          <img src={data.author.icon} loading="lazy" />{" "}
+          <p>{data.author.name}</p>
         </span>
         <div className="flex justify-between gap-[10px]">
           <div className="flex flex-col gap-[2px]">

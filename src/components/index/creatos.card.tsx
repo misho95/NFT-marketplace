@@ -40,7 +40,11 @@ const CreatorsCard = ({
       <span className="absolute top-[20px] left-[20px] w-[30px] h-[30px] bg-[#2B2B2B] rounded-full text-[#858584] flex justify-center items-center select-none">
         {index + 1}
       </span>
-      <img src={img} className="w-[120px] h-[120px] rounded-full" />
+      <img
+        src={img}
+        className="w-[120px] h-[120px] rounded-full"
+        loading="lazy"
+      />
       <div className="flex flex-col gap-[3px] justify-center items-center">
         <h5 className="text-[22px]">{title}</h5>
         <div role="sale-container" className="flex gap-[10px]">

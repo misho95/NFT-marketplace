@@ -6,11 +6,11 @@ import ContainerCenter from "../shared/container.center";
 const FeaturedPoster = () => {
   return (
     <div className="bg-[#3B3B3B] rounded-3xl w-full h-full hover:scale-90 duration-200">
-      <img src={img} />
+      <img src={img} loading="lazy" />
       <span className="p-[25px] flex flex-col gap-[10px]">
         <h5 className="text-white text-[25px]">Space Walking</h5>
         <span role="author" className="flex gap-[10px] ">
-          <img src={avatar} />
+          <img src={avatar} loading="lazy" />
           <p>Animakid</p>
         </span>
       </span>
