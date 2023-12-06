@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import CategoriesCard from "./categories.card";
 import { useWindowSize } from "@uidotdev/usehooks";
+import ContainerCenter from "../shared/container.center";
 
 const Categories = () => {
   const containerRef = useRef<HTMLInputElement>(null);
@@ -71,23 +72,29 @@ const Categories = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-[30px] py-[30px] text-white font-WorkSans">
-      <h3 className="text-[28px] sm:text-[38px] text-white font-WorkSans">
-        Browse Categories
-      </h3>
-      <div ref={containerRef} className="flex flex-wrap " style={{ gap: gap }}>
-        {categoriesData.map((d) => {
-          return (
-            <CategoriesCard
-              key={d.id}
-              title={d.title}
-              img={d.img}
-              responsProps={{ divSize, row, gap }}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <ContainerCenter>
+      <section className="flex flex-col gap-[30px] py-[30px] text-white font-WorkSans">
+        <h3 className="text-[28px] sm:text-[38px] text-white font-WorkSans">
+          Browse Categories
+        </h3>
+        <div
+          ref={containerRef}
+          className="flex flex-wrap "
+          style={{ gap: gap }}
+        >
+          {categoriesData.map((d) => {
+            return (
+              <CategoriesCard
+                key={d.id}
+                title={d.title}
+                img={d.img}
+                responsProps={{ divSize, row, gap }}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </ContainerCenter>
   );
 };
 

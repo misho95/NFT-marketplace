@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@uidotdev/usehooks";
 import MainButton from "../shared/main.button";
 import DiscoverCard from "./discover.card";
+import ContainerCenter from "../shared/container.center";
 
 const Discover = () => {
   const containerRef = useRef<HTMLInputElement>(null);
@@ -69,49 +70,51 @@ const Discover = () => {
   ];
 
   return (
-    <section className="flex flex-col py-[30px]">
-      <div
-        role="title"
-        className="font-WorkSans text-white flex justify-between items-center pb-[45px]"
-      >
-        <span className="flex flex-col gap-[8px]">
-          <h3 className="text-[28px] sm:text-[38px]">Discover More NFTs</h3>
-          <p className="text-[16px] sm:text-[22px]">
-            Explore new trending NFTs
-          </p>
-        </span>
+    <ContainerCenter>
+      <section className="flex flex-col py-[30px]">
+        <div
+          role="title"
+          className="font-WorkSans text-white flex justify-between items-center pb-[45px]"
+        >
+          <span className="flex flex-col gap-[8px]">
+            <h3 className="text-[28px] sm:text-[38px]">Discover More NFTs</h3>
+            <p className="text-[16px] sm:text-[22px]">
+              Explore new trending NFTs
+            </p>
+          </span>
+          <MainButton
+            title={"View Rankings"}
+            icon={"src/assets/EyeIcon.png"}
+            wide={true}
+            CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
+          />
+        </div>
+        <div
+          ref={containerRef}
+          role="cards-container"
+          className="w-full flex flex-wrap sm:flex-nowrap"
+          style={{ gap: gap }}
+        >
+          {discoverData.map((d, index) => {
+            return (
+              index < total && (
+                <DiscoverCard
+                  key={d.id}
+                  data={d}
+                  responsProps={{ divSize, row, gap }}
+                />
+              )
+            );
+          })}
+        </div>
         <MainButton
           title={"View Rankings"}
           icon={"src/assets/EyeIcon.png"}
           wide={true}
-          CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
+          CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
         />
-      </div>
-      <div
-        ref={containerRef}
-        role="cards-container"
-        className="w-full flex flex-wrap sm:flex-nowrap"
-        style={{ gap: gap }}
-      >
-        {discoverData.map((d, index) => {
-          return (
-            index < total && (
-              <DiscoverCard
-                key={d.id}
-                data={d}
-                responsProps={{ divSize, row, gap }}
-              />
-            )
-          );
-        })}
-      </div>
-      <MainButton
-        title={"View Rankings"}
-        icon={"src/assets/EyeIcon.png"}
-        wide={true}
-        CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
-      />
-    </section>
+      </section>
+    </ContainerCenter>
   );
 };
 

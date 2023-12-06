@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import TrendingCard from "./trending.card";
 import { useWindowSize } from "@uidotdev/usehooks";
+import ContainerCenter from "../shared/container.center";
 
 const Trending = () => {
   const containerRef = useRef<HTMLInputElement>(null);
@@ -69,41 +70,43 @@ const Trending = () => {
   ];
 
   return (
-    <section className="flex flex-col justify-between gap-[60px] py-[30px] text-white font-WorkSans">
-      <div role="title" className="flex flex-col gap-[10px]">
-        <h4 className="text-[38px] ">Trending Collection</h4>
-        <p>Checkout our weekly updated trending collection.</p>
-      </div>
-      <div
-        ref={containerRef}
-        role="cards-holder"
-        className="flex justify-between w-full"
-        style={{ gap: gap }}
-      >
-        {featuredData.map((d, index) => {
-          return (
-            row > index && (
-              <TrendingCard
-                key={d.id}
-                props={{
-                  img: d.img,
-                  title: d.title,
-                  author: {
-                    name: d.author.name,
-                    icon: d.author.icon,
-                  },
-                  icons: {
-                    icon: d.icons.icon,
-                    icon2: d.icons.icon2,
-                  },
-                }}
-                responsProps={{ divSize, row, gap }}
-              />
-            )
-          );
-        })}
-      </div>
-    </section>
+    <ContainerCenter>
+      <section className="flex flex-col justify-between gap-[60px] py-[30px] text-white font-WorkSans">
+        <div role="title" className="flex flex-col gap-[10px]">
+          <h4 className="text-[38px] ">Trending Collection</h4>
+          <p>Checkout our weekly updated trending collection.</p>
+        </div>
+        <div
+          ref={containerRef}
+          role="cards-holder"
+          className="flex justify-between w-full"
+          style={{ gap: gap }}
+        >
+          {featuredData.map((d, index) => {
+            return (
+              row > index && (
+                <TrendingCard
+                  key={d.id}
+                  props={{
+                    img: d.img,
+                    title: d.title,
+                    author: {
+                      name: d.author.name,
+                      icon: d.author.icon,
+                    },
+                    icons: {
+                      icon: d.icons.icon,
+                      icon2: d.icons.icon2,
+                    },
+                  }}
+                  responsProps={{ divSize, row, gap }}
+                />
+              )
+            );
+          })}
+        </div>
+      </section>
+    </ContainerCenter>
   );
 };
 

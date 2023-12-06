@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import CreatorsCard from "./creatos.card";
 import { useWindowSize } from "@uidotdev/usehooks";
 import MainButton from "../shared/main.button";
+import ContainerCenter from "../shared/container.center";
 
 const Creators = () => {
   const creatorsData = [
@@ -109,52 +110,54 @@ const Creators = () => {
   }, [windowSize]);
 
   return (
-    <section className="flex flex-col gap-[30px] py-[30px]">
-      <div
-        role="title"
-        className="font-WorkSans text-white flex justify-between items-center pb-[45px]"
-      >
-        <span className="flex flex-col gap-[8px]">
-          <h3 className="text-[28px] sm:text-[38px]">Top creators</h3>
-          <p className="text-[16px] sm:text-[22px]">
-            Checkout Top Rated Creators on the NFT Marketplace
-          </p>
-        </span>
+    <ContainerCenter>
+      <section className="flex flex-col gap-[30px] py-[30px]">
+        <div
+          role="title"
+          className="font-WorkSans text-white flex justify-between items-center pb-[45px]"
+        >
+          <span className="flex flex-col gap-[8px]">
+            <h3 className="text-[28px] sm:text-[38px]">Top creators</h3>
+            <p className="text-[16px] sm:text-[22px]">
+              Checkout Top Rated Creators on the NFT Marketplace
+            </p>
+          </span>
+          <MainButton
+            title={"View Rankings"}
+            icon={"src/assets/RocketLaunchIcon.png"}
+            wide={true}
+            CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
+          />
+        </div>
+        <div
+          ref={containerRef}
+          role="cards-container"
+          className="w-full flex flex-wrap"
+          style={{ gap: gap }}
+        >
+          {creatorsData.map((d, index) => {
+            return (
+              index < total && (
+                <CreatorsCard
+                  key={d.id}
+                  index={index}
+                  title={d.title}
+                  totalSales={d.totalSales}
+                  img={d.img}
+                  responsProps={{ divSize, row, gap }}
+                />
+              )
+            );
+          })}
+        </div>
         <MainButton
           title={"View Rankings"}
           icon={"src/assets/RocketLaunchIcon.png"}
           wide={true}
-          CTS={"border-2 border-[#A259FF] bg-transparent hidden sm:flex"}
+          CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
         />
-      </div>
-      <div
-        ref={containerRef}
-        role="cards-container"
-        className="w-full flex flex-wrap"
-        style={{ gap: gap }}
-      >
-        {creatorsData.map((d, index) => {
-          return (
-            index < total && (
-              <CreatorsCard
-                key={d.id}
-                index={index}
-                title={d.title}
-                totalSales={d.totalSales}
-                img={d.img}
-                responsProps={{ divSize, row, gap }}
-              />
-            )
-          );
-        })}
-      </div>
-      <MainButton
-        title={"View Rankings"}
-        icon={"src/assets/RocketLaunchIcon.png"}
-        wide={true}
-        CTS={"border-2 border-[#A259FF] bg-transparent flex sm:hidden"}
-      />
-    </section>
+      </section>
+    </ContainerCenter>
   );
 };
 

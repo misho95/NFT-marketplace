@@ -20,15 +20,13 @@ const IndexPage = () => {
   return (
     <animated.main
       style={{ ...animatedPage }}
-      className="flex justify-center items-center"
+      className="flex flex-col justify-center items-center"
     >
-      <div role="center-content" className="w-11/12 sm:w-10/12 lg:w-8/12">
-        <Featured />
-        <Trending />
-        <Creators />
-        <Categories />
-        <Discover />
-      </div>
+      <Featured />
+      <Trending />
+      <Creators />
+      <Categories />
+      <Discover />
     </animated.main>
   );
 };

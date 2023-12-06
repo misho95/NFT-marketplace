@@ -1,6 +1,13 @@
 import { twMerge } from "tailwind-merge";
 
-const MainButton = ({ title, icon, wide, CTS }) => {
+interface PropsType {
+  title: string;
+  icon: string;
+  wide: boolean;
+  CTS: string;
+}
+
+const MainButton = ({ title, icon, wide, CTS }: PropsType) => {
   const classes = twMerge(
     `bg-[#A259FF] text-white rounded-3xl ${
       wide ? "px-[50px] py-[18px]" : "px-[32px] py-[22px]"
