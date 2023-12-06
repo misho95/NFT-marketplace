@@ -4,25 +4,12 @@ import Twitter from "../../../assets/TwitterLogo.png";
 import Instagram from "../../../assets/InstagramLogo.png";
 import { NavLinks } from "../nav.links";
 import { Link, useLocation } from "react-router-dom";
-import MainButton from "../main.button";
 import Logo from "../header/logo";
-import { useWindowSize } from "@uidotdev/usehooks";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import EmailInput from "../email.input";
 
 const Footer = () => {
-  const windowSize = useWindowSize();
-  const [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    if (windowSize.width && windowSize.width < 768) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [windowSize]);
-
   const location = useLocation();
   const [animatedHeader, api] = useSpring(() => ({
     from: { opacity: 0 },
