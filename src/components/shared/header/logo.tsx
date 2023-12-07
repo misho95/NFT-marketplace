@@ -9,6 +9,7 @@ const Logo = () => {
         src={LogoImg}
         className="w-[243.41px] h-[32px]"
         loading={useLazyLoadingHook()}
+        alt="logo"
       />
     </Link>
   );

@@ -52,21 +52,25 @@ const Footer = () => {
                 src={Discord}
                 className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer w-fit h-fit"
                 loading="lazy"
+                alt="discord"
               />
               <img
                 src={YouTube}
                 className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer w-fit h-fit"
                 loading="lazy"
+                alt="youtube"
               />
               <img
                 src={Twitter}
                 className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer w-fit h-fit"
                 loading="lazy"
+                alt="twitter"
               />
               <img
                 src={Instagram}
                 className="opacity-50 hover:opacity-100 sm:hover:scale-90 duration-200 cursor-pointer w-fit h-fit"
                 loading="lazy"
+                alt="instagram"
               />
             </span>
           </span>

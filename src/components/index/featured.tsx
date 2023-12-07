@@ -7,7 +7,12 @@ import { useLazyLoadingHook } from "../shared/custom.hook";
 const FeaturedPoster = () => {
   return (
     <div className="bg-[#3B3B3B] rounded-3xl w-full h-full sm:hover:scale-90 duration-200">
-      <img src={img} loading={useLazyLoadingHook()} className="w-fit h-fit" />
+      <img
+        src={img}
+        loading={useLazyLoadingHook()}
+        className="w-fit h-fit"
+        alt="space-img"
+      />
       <span className="p-[25px] flex flex-col gap-[10px]">
         <h5 className="text-white text-[25px]">Space Walking</h5>
         <span role="author" className="flex gap-[10px] ">
@@ -15,6 +20,7 @@ const FeaturedPoster = () => {
             src={avatar}
             loading={useLazyLoadingHook()}
             className="w-fit h-fit"
+            alt="avatar"
           />
           <p>Animakid</p>
         </span>

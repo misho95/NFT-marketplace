@@ -16,7 +16,9 @@ const MainButton = ({ title, icon, wide, CTS }: PropsType) => {
 
   return (
     <button className={classes}>
-      {icon && <img src={icon} loading="lazy" className="w-fit h-fit" />}
+      {icon && (
+        <img src={icon} loading="lazy" className="w-fit h-fit" alt="icon" />
+      )}
       <p>{title}</p>
     </button>
   );
