@@ -72,7 +72,12 @@ const Header = () => {
           className="lg:hidden"
           onClick={() => setOpen(!open)}
         >
-          <img src={MenuIcon} alt="open/close" loading="lazy" />
+          <img
+            src={MenuIcon}
+            alt="open/close"
+            loading="lazy"
+            className="w-fit h-fit"
+          />
         </button>
       </div>
     </animated.header>

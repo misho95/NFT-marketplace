@@ -1,3 +1,4 @@
+import { useVisibilityChange } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 
 interface GetCardSizePropsType {
@@ -33,4 +34,13 @@ export const useGetCardSize = ({
   }, [width, height, divSize, row, gap]);
 
   return { width: cardWidth, height: cardHeight };
+};
+
+export const useLazyLoadingHook = () => {
+  const documentVisible = useVisibilityChange();
+  if (documentVisible) {
+    return "eager";
+  } else {
+    return "lazy";
+  }
 };

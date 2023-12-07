@@ -2,15 +2,20 @@ import img from "../../assets/Image Placeholder.avif";
 import avatar from "../../assets/Avatar.avif";
 import MainButton from "../shared/main.button";
 import ContainerCenter from "../shared/container.center";
+import { useLazyLoadingHook } from "../shared/custom.hook";
 
 const FeaturedPoster = () => {
   return (
     <div className="bg-[#3B3B3B] rounded-3xl w-full h-full sm:hover:scale-90 duration-200">
-      <img src={img} loading="lazy" />
+      <img src={img} loading={useLazyLoadingHook()} className="w-fit h-fit" />
       <span className="p-[25px] flex flex-col gap-[10px]">
         <h5 className="text-white text-[25px]">Space Walking</h5>
         <span role="author" className="flex gap-[10px] ">
-          <img src={avatar} loading="lazy" />
+          <img
+            src={avatar}
+            loading={useLazyLoadingHook()}
+            className="w-fit h-fit"
+          />
           <p>Animakid</p>
         </span>
       </span>

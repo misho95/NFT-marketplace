@@ -38,11 +38,21 @@ const DiscoverCard = ({ data, responsProps }: PropsType) => {
       className=" text-white font-WorkSans cursor-pointer flex flex-col sm:hover:scale-90 duration-200"
       style={{ width: width, height: height }}
     >
-      <img src={data.img} loading="lazy" alt={data.title} />
+      <img
+        src={data.img}
+        loading="lazy"
+        alt={data.title}
+        className="w-fit h-fit"
+      />
       <div className="flex flex-col gap-[15px] justify-between px-[20px] py-[10px] bg-[#3B3B3B] rounded-b-2xl">
         <h5 className="text-[22px]">Distant Galaxy</h5>
         <span className="flex gap-[6px]">
-          <img src={data.author.icon} loading="lazy" alt={data.author.name} />{" "}
+          <img
+            src={data.author.icon}
+            loading="lazy"
+            alt={data.author.name}
+            className="w-fit h-fit"
+          />
           <p>{data.author.name}</p>
         </span>
         <div className="flex justify-between gap-[10px]">
