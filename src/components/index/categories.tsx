@@ -32,42 +32,42 @@ const Categories = () => {
     {
       id: 1,
       title: "Art",
-      img: "/assets/Category Icon.png",
+      img: "/assets/Category Icon.avif",
     },
     {
       id: 2,
       title: "Collectibles",
-      img: "/assets/Category Icon2.png",
+      img: "/assets/Category Icon2.avif",
     },
     {
       id: 3,
       title: "Music",
-      img: "/assets/Category Icon3.png",
+      img: "/assets/Category Icon3.avif",
     },
     {
       id: 4,
       title: "Photography",
-      img: "/assets/Category Icon4.png",
+      img: "/assets/Category Icon4.avif",
     },
     {
       id: 5,
       title: "Video",
-      img: "/assets/Category Icon5.png",
+      img: "/assets/Category Icon5.avif",
     },
     {
       id: 6,
       title: "Utility",
-      img: "/assets/Category Icon6.png",
+      img: "/assets/Category Icon6.avif",
     },
     {
       id: 7,
       title: "Sport",
-      img: "/assets/Category Icon7.png",
+      img: "/assets/Category Icon7.avif",
     },
     {
       id: 8,
       title: "Virtual Worlds",
-      img: "/assets/Category Icon8.png",
+      img: "/assets/Category Icon8.avif",
     },
   ];
 

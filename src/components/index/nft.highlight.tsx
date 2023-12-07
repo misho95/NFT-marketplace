@@ -6,7 +6,7 @@ const NftHighLight = () => {
     <section className="w-full h-[593px] sm:h-[630px] lg:h-[640px] my-[20px] relative text-white font-WorkSans">
       <div className="absolute w-full h-full z-20 bg-gradient-to-t from-[#A259FF] to-[transparent]" />
       <img
-        src="/assets/NFT Highlight.png"
+        src="/assets/NFT Highlight.avif"
         className="w-full h-full object-cover"
       />
       <article className="absolute top-0 left-0 w-full h-full z-30 flex justify-center items-end py-[60px]">
@@ -14,7 +14,7 @@ const NftHighLight = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-[30px]">
             <div className="flex flex-col gap-[20px] lg:gap-[45px]">
               <span className="w-[151px] h-[44px] bg-[#3B3B3B] rounded-full flex justify-center items-center gap-[6px] cursor-pointer sm:hover:scale-90 duration-200">
-                <img src={"/assets/ava7.png"} className="w-[24px] h-[24px]" />
+                <img src={"/assets/ava7.avif"} className="w-[24px] h-[24px]" />
                 <p>Shroomie</p>
               </span>
               <h2 className="text-[38px] lg:text-[51px]">Magic Mashrooms</h2>

@@ -30,41 +30,41 @@ const Trending = () => {
   const featuredData = [
     {
       id: 1,
-      img: "/assets/dog.png",
+      img: "/assets/dog.avif",
       title: "DSGN Animals",
       author: {
         name: "MrFox",
-        icon: "/assets/Avatar2.png",
+        icon: "/assets/Avatar2.avif",
       },
       icons: {
-        icon: "/assets/dog1.png",
-        icon2: "/assets/dog2.png",
+        icon: "/assets/dog1.avif",
+        icon2: "/assets/dog2.avif",
       },
     },
     {
       id: 2,
-      img: "/assets/mushrooms.png",
+      img: "/assets/mushrooms.avif",
       title: "Magic Mushrooms",
       author: {
         name: "Shroomie",
-        icon: "/assets/Avatar3.png",
+        icon: "/assets/Avatar3.avif",
       },
       icons: {
-        icon: "/assets/mushrooms2.png",
-        icon2: "/assets/mushrooms3.png",
+        icon: "/assets/mushrooms2.avif",
+        icon2: "/assets/mushrooms3.avif",
       },
     },
     {
       id: 3,
-      img: "/assets/robot.png",
+      img: "/assets/robot.avif",
       title: "Disco Machines",
       author: {
         name: "BeKind2Robots",
-        icon: "/assets/Avatar4.png",
+        icon: "/assets/Avatar4.avif",
       },
       icons: {
-        icon: "/assets/robot1.png",
-        icon2: "/assets/robot2.png",
+        icon: "/assets/robot1.avif",
+        icon2: "/assets/robot2.avif",
       },
     },
   ];

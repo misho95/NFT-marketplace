@@ -1,4 +1,4 @@
-import img from "../../assets/Photo.png";
+import img from "../../assets/Photo.avif";
 import ContainerCenter from "../shared/container.center";
 import EmailInput from "../shared/email.input";
 

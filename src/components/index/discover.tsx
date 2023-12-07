@@ -37,9 +37,9 @@ const Discover = () => {
     {
       id: 1,
       title: "Distant Galaxy",
-      img: "/assets/dicover1.png",
+      img: "/assets/dicover1.avif",
       author: {
-        icon: "/assets/Avatar5.png",
+        icon: "/assets/Avatar5.avif",
         name: "MoonDancer",
       },
       price: 1.63,
@@ -48,9 +48,9 @@ const Discover = () => {
     {
       id: 2,
       title: "Life On Edena",
-      img: "/assets/dicover2.png",
+      img: "/assets/dicover2.avif",
       author: {
-        icon: "/assets/Avatar6.png",
+        icon: "/assets/Avatar6.avif",
         name: "NebulaKid",
       },
       price: 1.63,
@@ -59,9 +59,9 @@ const Discover = () => {
     {
       id: 3,
       title: "AstroFiction",
-      img: "/assets/dicover3.png",
+      img: "/assets/dicover3.avif",
       author: {
-        icon: "/assets/Avatar7.png",
+        icon: "/assets/Avatar7.avif",
         name: "Spaceone",
       },
       price: 1.63,

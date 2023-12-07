@@ -33,19 +33,19 @@ const HowItWorks = () => {
       id: 1,
       title: "Setup Your wallet",
       text: `Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.`,
-      icon: "/assets/Icon1.png",
+      icon: "/assets/Icon1.avif",
     },
     {
       id: 2,
       title: "Create Collection",
       text: `Upload your work and setup your collection. Add a description, social links and floor price.`,
-      icon: "/assets/Icon2.png",
+      icon: "/assets/Icon2.avif",
     },
     {
       id: 3,
       title: "Start Earning",
       text: `Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.`,
-      icon: "/assets/Icon3.png",
+      icon: "/assets/Icon3.avif",
     },
   ];
 

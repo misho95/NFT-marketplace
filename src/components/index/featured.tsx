@@ -1,5 +1,5 @@
-import img from "../../assets/Image Placeholder.png";
-import avatar from "../../assets/Avatar.png";
+import img from "../../assets/Image Placeholder.avif";
+import avatar from "../../assets/Avatar.avif";
 import MainButton from "../shared/main.button";
 import ContainerCenter from "../shared/container.center";
 
