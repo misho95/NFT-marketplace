@@ -11,10 +11,7 @@ const BurgerMenu = () => {
   }, []);
 
   return (
-    <div
-      role="bg-tranparent"
-      className="bg-black/20 fixed top-[100px] left-0 w-full h-screen lg:hidden"
-    >
+    <div className="bg-black/20 fixed top-[100px] left-0 w-full h-screen lg:hidden">
       <nav className="flex flex-col justify-center items-center gap-[3px] bg-neutral-200">
         {NavLinks.map((l, index) => {
           return (

@@ -38,10 +38,7 @@ const Footer = () => {
       style={{ ...animatedHeader }}
       className="w-full bg-[#3B3B3B] flex justify-center items-center"
     >
-      <div
-        role="center-footer-content"
-        className="w-11/12 sm:w-10/12 lg:w-8/12 py-[45px] flex flex-col gap-[30px]"
-      >
+      <div className="w-11/12 sm:w-10/12 lg:w-8/12 py-[45px] flex flex-col gap-[30px]">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-[20px]">
           <span className="flex flex-col gap-[20px] text-[#CCCCCC] font-WorkSans">
             <Logo />

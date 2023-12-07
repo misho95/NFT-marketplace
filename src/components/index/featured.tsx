@@ -15,7 +15,7 @@ const FeaturedPoster = () => {
       />
       <span className="p-[25px] flex flex-col gap-[10px]">
         <h5 className="text-white text-[25px]">Space Walking</h5>
-        <span role="author" className="flex gap-[10px] ">
+        <span className="flex gap-[10px] ">
           <img
             src={avatar}
             loading={useLazyLoadingHook()}
@@ -50,7 +50,7 @@ const Featured = () => {
             wide={true}
             CTS={"w-full sm:w-fit sm:h-fit"}
           />
-          <div role="stats-container" className="flex gap-[50px]">
+          <div className="flex gap-[50px]">
             <span>
               <h4 className="text-[22px] lg:text-[28px]">240k+ </h4>
               <p className="text-[16px] lg:text-[24px]">Total Sale</p>

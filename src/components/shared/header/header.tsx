@@ -42,10 +42,7 @@ const Header = () => {
           <BurgerMenu />
         </Suspense>
       )}
-      <div
-        role="center-elements"
-        className="w-11/12 sm:w-10/12 lg:w-8/12 flex justify-between items-center "
-      >
+      <div className="w-11/12 sm:w-10/12 lg:w-8/12 flex justify-between items-center ">
         <Logo />
         <nav className="hidden lg:flex justify-center items-center gap-[6px] font-WorkSans">
           {NavLinks.map((l, index) => {
@@ -68,7 +65,6 @@ const Header = () => {
         </nav>
         <button
           aria-label="Open The Menu"
-          aria-hidden
           className="lg:hidden"
           onClick={() => setOpen(!open)}
         >

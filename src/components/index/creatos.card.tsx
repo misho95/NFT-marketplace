@@ -48,7 +48,7 @@ const CreatorsCard = ({
       />
       <div className="flex flex-col gap-[3px] justify-center items-center">
         <h5 className="text-[22px]">{title}</h5>
-        <div role="sale-container" className="flex gap-[10px]">
+        <div className="flex gap-[10px]">
           <span className="text-[#858584]">Total Sales:</span>
           <p>
             {totalSales}

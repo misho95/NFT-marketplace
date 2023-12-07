@@ -5,11 +5,7 @@ interface PropsType {
 }
 
 const ContainerCenter = ({ children }: PropsType) => {
-  return (
-    <div role="center-content" className="w-11/12 sm:w-10/12 lg:w-8/12">
-      {children}
-    </div>
-  );
+  return <div className="w-11/12 sm:w-10/12 lg:w-8/12">{children}</div>;
 };
 
 export default ContainerCenter;

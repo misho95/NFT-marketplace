@@ -81,7 +81,7 @@ const TrendingCard = ({ props, responsProps }: ComponentPropsType) => {
           1025+
         </span>
       </div>
-      <div role="author" className="flex flex-col gap-[6px]">
+      <div className="flex flex-col gap-[6px]">
         <h5 className="text-[22px]">{title}</h5>
         <span className="flex gap-[6px] cursor-pointer">
           <img

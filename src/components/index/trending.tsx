@@ -72,13 +72,12 @@ const Trending = () => {
   return (
     <ContainerCenter>
       <section className="flex flex-col justify-between gap-[60px] py-[30px] text-white font-WorkSans">
-        <div role="title" className="flex flex-col gap-[10px]">
+        <div className="flex flex-col gap-[10px]">
           <h4 className="text-[38px] ">Trending Collection</h4>
           <p>Checkout our weekly updated trending collection.</p>
         </div>
         <div
           ref={containerRef}
-          role="cards-holder"
           className="flex justify-between w-full"
           style={{ gap: gap }}
         >

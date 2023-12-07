@@ -52,10 +52,7 @@ const HowItWorks = () => {
   return (
     <ContainerCenter>
       <section className="flex flex-col py-[30px]">
-        <div
-          role="title"
-          className="font-WorkSans text-white flex justify-between items-center pb-[45px]"
-        >
+        <div className="font-WorkSans text-white flex justify-between items-center pb-[45px]">
           <span className="flex flex-col gap-[8px]">
             <h3 className="text-[28px] sm:text-[38px]">How it works</h3>
             <p className="text-[16px] sm:text-[22px]">
@@ -65,7 +62,6 @@ const HowItWorks = () => {
         </div>
         <div
           ref={containerRef}
-          role="cards-container"
           className="w-full flex flex-wrap sm:flex-nowrap"
           style={{ gap: gap }}
         >
