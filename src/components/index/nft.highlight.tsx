@@ -9,6 +9,7 @@ const NftHighLight = () => {
         src="/assets/NFT Highlight.avif"
         className="w-full h-full object-cover"
         alt="Nft Img"
+        loading="lazy"
       />
       <article className="absolute top-0 left-0 w-full h-full z-30 flex justify-center items-end py-[60px]">
         <ContainerCenter>
@@ -19,6 +20,7 @@ const NftHighLight = () => {
                   src={"/assets/ava7.avif"}
                   className="w-[24px] h-[24px]"
                   alt="avatar"
+                  loading="lazy"
                 />
                 <p>Shroomie</p>
               </span>
