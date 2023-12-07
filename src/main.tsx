@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/shared/header/header";
-import Footer from "./components/shared/footer/footer";
+const Footer = lazy(() => import("./components/shared/footer/footer"));
 import Loading from "./components/shared/loading";
 const IndexPage = lazy(() => import("./pages/index.page"));
 

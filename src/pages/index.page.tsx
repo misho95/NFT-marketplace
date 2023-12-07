@@ -1,12 +1,14 @@
 import { animated, useSpring } from "@react-spring/web";
-import Featured from "../components/index/featured";
-import Trending from "../components/index/trending";
-import Creators from "../components/index/creators";
-import Categories from "../components/index/categories";
-import Discover from "../components/index/discover";
-import NftHighLight from "../components/index/nft.highlight";
-import HowItWorks from "../components/index/how.it.works";
-import JoinUs from "../components/index/join.us";
+import { Suspense, lazy } from "react";
+import Loading from "../components/shared/loading";
+const Featured = lazy(() => import("../components/index/featured"));
+const Trending = lazy(() => import("../components/index/trending"));
+const Creators = lazy(() => import("../components/index/creators"));
+const Categories = lazy(() => import("../components/index/categories"));
+const Discover = lazy(() => import("../components/index/discover"));
+const NftHighLight = lazy(() => import("../components/index/nft.highlight"));
+const HowItWorks = lazy(() => import("../components/index/how.it.works"));
+const JoinUs = lazy(() => import("../components/index/join.us"));
 
 const IndexPage = () => {
   const animatedPage = useSpring({
@@ -25,11 +27,17 @@ const IndexPage = () => {
       style={{ ...animatedPage }}
       className="flex flex-col justify-center items-center"
     >
-      <Featured />
-      <Trending />
+      <Suspense fallback={<Loading />}>
+        <Featured />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Trending />
+      </Suspense>
       <Creators />
       <Categories />
-      <Discover />
+      <Suspense fallback={<Loading />}>
+        <Discover />
+      </Suspense>
       <NftHighLight />
       <HowItWorks />
       <JoinUs />
