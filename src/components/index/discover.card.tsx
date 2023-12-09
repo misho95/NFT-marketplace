@@ -42,7 +42,7 @@ const DiscoverCard = ({ data, responsProps }: PropsType) => {
         src={data.img}
         loading="lazy"
         alt={data.title}
-        className="w-fit h-fit"
+        className="w-full h-fit"
       />
       <div className="flex flex-col gap-[15px] justify-between px-[20px] py-[10px] bg-[#3B3B3B] rounded-b-2xl">
         <h5 className="text-[22px]">Distant Galaxy</h5>
